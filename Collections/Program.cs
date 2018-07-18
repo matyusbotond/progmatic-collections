@@ -25,7 +25,15 @@ namespace Collections
                 Console.WriteLine(item);
             }
             
+            bool contains = list1.Contains("alma");
 
+            if (list1.Contains("alma"))
+            {
+                list1.Remove("alma");
+            }
+
+            int index = list1.IndexOf("korte");
+            int index2 = list1.IndexOf("korte2");
 
             //Adott elem törlése
             bool removeResult = list1.Remove("alma");
@@ -33,6 +41,7 @@ namespace Collections
 
             //Adott indexen lévő elem törlése
             list1.RemoveAt(0);
+
 
             foreach (string item in list1)
             {
