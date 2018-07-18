@@ -112,6 +112,10 @@ namespace Collections
             }
 
             bool removedResult = phonebook.Remove("06707654321");
+            bool removedResult2 = phonebook.Remove("067076543210");
+
+            ICollection<string> keys = phonebook.Keys;
+            ICollection<Person> values = phonebook.Values;
 
             Console.ReadKey();
         }
