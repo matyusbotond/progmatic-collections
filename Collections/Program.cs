@@ -106,7 +106,12 @@ namespace Collections
                 Person foundPerson = phonebook["067076543210"];
             }
 
-            Person foundPerson2 = phonebook["06707654321"];
+            if (phonebook.ContainsKey("06707654321"))
+            {
+                Person foundPerson2 = phonebook["06707654321"]; 
+            }
+
+            bool removedResult = phonebook.Remove("06707654321");
 
             Console.ReadKey();
         }
