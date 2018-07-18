@@ -24,7 +24,7 @@ namespace Collections
             //{
             //    Console.WriteLine(item);
             //}
-            
+
             //bool contains = list1.Contains("alma");
 
             //if (list1.Contains("alma"))
@@ -53,35 +53,60 @@ namespace Collections
 
             //Console.ReadKey();
 
-            List<Person> people = new List<Person>();
+            //List<Person> people = new List<Person>();
+
+            //Person p1 = new Person();
+
+            //p1.Name = "Béla";
+
+            //people.Add(p1);
+
+            //Person p2 = new Person();
+            //p2.Name = "Aladár";
+
+            //people.Add(p2);
+
+            //foreach (Person person in people)
+            //{
+            //    Console.WriteLine(person.Name);
+            //}
+
+            //if (people.Contains(p1))
+            //{
+            //    people.Remove(p1);
+            //}
+
+            //foreach (Person person in people)
+            //{
+            //    Console.WriteLine(person.Name);
+            //}
+
+            //Person aladar = people[0];
+
+            //Console.ReadKey();
+
+            Dictionary<string, Person> phonebook = new Dictionary<string, Person>();
 
             Person p1 = new Person();
-
             p1.Name = "Béla";
-
-            people.Add(p1);
+            phonebook.Add("06301234567", p1);
 
             Person p2 = new Person();
             p2.Name = "Aladár";
+            phonebook.Add("06707654321", p2);
 
-            people.Add(p2);
-
-            foreach (Person person in people)
+            foreach (KeyValuePair<string, Person> item in phonebook)
             {
-                Console.WriteLine(person.Name);
+                Console.WriteLine("Név: {0}, telefonszám: {1}",
+                    item.Value.Name, item.Key);
             }
 
-            if (people.Contains(p1))
+            if (phonebook.ContainsKey("067076543210"))
             {
-                people.Remove(p1);
+                Person foundPerson = phonebook["067076543210"];
             }
 
-            foreach (Person person in people)
-            {
-                Console.WriteLine(person.Name);
-            }
-
-            Person aladar = people[0];
+            Person foundPerson2 = phonebook["06707654321"];
 
             Console.ReadKey();
         }
