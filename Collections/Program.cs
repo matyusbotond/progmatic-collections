@@ -10,6 +10,39 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            List<string> list1 = new List<string>();
+
+            //Listához hozzáadás
+            list1.Add("alma");
+            list1.Add("korte");
+            list1.Add("barack");
+
+            //Adott indexre beszúrás
+            list1.Insert(1, "meggy");
+
+            foreach (string item in list1)
+            {
+                Console.WriteLine(item);
+            }
+            
+
+
+            //Adott elem törlése
+            bool removeResult = list1.Remove("alma");
+            //bool removeResult2 = list1.Remove("alma2");
+
+            //Adott indexen lévő elem törlése
+            list1.RemoveAt(0);
+
+            foreach (string item in list1)
+            {
+                Console.WriteLine(item);
+            }
+
+            //Összes elem törlése
+            list1.Clear();
+
+            Console.ReadKey();
         }
     }
 }
